@@ -4,6 +4,11 @@ if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     require_once __DIR__ . '/vendor/autoload.php';
 }
 
+if (defined('LOG_REALDIR')) {
+    define("PAYGENT_LOG_PATH_LINK", LOG_REALDIR . "paygent.log");
+    define("PAYGENT_LOG_PATH", LOG_REALDIR . "paygent_cube.log");
+}
+
 /**
  * プラグインのメインクラス
  */

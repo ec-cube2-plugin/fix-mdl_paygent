@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    FixMdlPaygent\Command\:
+        resource: '../src/FixMdlPaygent/Command/*'
+        tags:
+            - { name: 'console.command' }
